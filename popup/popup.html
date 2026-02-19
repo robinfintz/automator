@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow Intelligence</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">Workflow Intelligence</h1>
+    <p class="tagline">Patterns from your last 60 minutes</p>
+  </header>
+  <main class="main">
+    <p class="cross-tab-note">Includes activity across all tabs.</p>
+    <section id="workflows" class="workflows"></section>
+    <section id="empty" class="empty hidden">
+      <p>No repeated workflows yet.</p>
+      <p class="hint">Browse as usual — we’ll suggest automations when we see patterns (3+ repeats).</p>
+      <p id="actionCount" class="action-count"></p>
+    </section>
+    <section id="error" class="error hidden"></section>
+    <footer class="footer">
+      <a id="openDashboard" href="#">Dashboard</a>
+      <button type="button" id="clearData" class="btn-secondary">Clear data</button>
+    </footer>
+  </main>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

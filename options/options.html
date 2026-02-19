@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Workflow Intelligence — Dashboard</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="logo">Workflow Intelligence</h1>
+      <p class="tagline">Patterns from the last 60 minutes · Activity across all tabs</p>
+    </div>
+  </header>
+  <main class="main">
+    <section class="insights-strip" id="insightsStrip">
+      <div class="insight-card">
+        <span class="insight-value" id="insightWorkflows">0</span>
+        <span class="insight-label">Workflows</span>
+      </div>
+      <div class="insight-card">
+        <span class="insight-value" id="insightActions">0</span>
+        <span class="insight-label">Actions</span>
+      </div>
+      <div class="insight-card">
+        <span class="insight-value" id="insightTime">—</span>
+        <span class="insight-label">Est. time in pattern</span>
+      </div>
+    </section>
+    <div class="toolbar">
+      <span class="action-count"><span class="live">Live</span> <span id="actionCount"></span></span>
+      <button type="button" id="clearData" class="btn-danger">Clear all data</button>
+    </div>
+    <section id="workflows" class="workflows"></section>
+    <section id="empty" class="empty hidden">
+      <div class="empty-icon" aria-hidden="true"></div>
+      <p class="empty-title">No repeated workflows yet</p>
+      <p class="empty-hint">Patterns need to repeat 3+ times. We track copy, paste, tab switches, and clicks across all tabs.</p>
+    </section>
+    <section id="error" class="error hidden"></section>
+  </main>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
